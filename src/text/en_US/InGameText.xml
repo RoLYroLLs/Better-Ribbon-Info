@@ -10,5 +10,11 @@
     <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_PRODUCTION_DESC">
       <Text>Shows production yield on the ribbon.</Text>
     </Replace>
+    <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_POPULATION_NAME">
+      <Text>Show Population</Text>
+    </Replace>
+    <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_POPULATION_DESC">
+      <Text>Shows population yield on the ribbon.</Text>
+    </Replace>
   </EnglishText>
 </Database>

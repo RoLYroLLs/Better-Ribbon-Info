@@ -7,6 +7,7 @@ const briOptions = new class {
     modID = "better-ribbon-info";
     defaults = {
         ShowProduction: Number(true),
+        ShowPopulation: Number(true),
     };
     data = {};
     load(optionID) {
@@ -30,10 +31,19 @@ const briOptions = new class {
         this.data.ShowProduction = Boolean(value);
         this.save("ShowProduction");
     }
+    get ShowPopulation() {
+        this.data.ShowPopulation ??= Boolean(this.load("ShowPopulation"));
+        return this.data.ShowPopulation;
+    }
+    set ShowPopulation(value) {
+        this.data.ShowPopulation = Boolean(value);
+        this.save("ShowPopulation");
+    }
 };
 
 // log stored values
 briOptions.ShowProduction;
+briOptions.ShowPopulation;
 
 Options.addInitCallback(() => {
     Options.addOption({
@@ -45,6 +55,16 @@ Options.addInitCallback(() => {
         updateListener: (_info, value) => briOptions.ShowProduction = value,
         label: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_PRODUCTION_NAME",
         description: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_PRODUCTION_DESC",
+    });
+    Options.addOption({
+        category: CategoryType.Mods,
+        group: "BRI_MOD",
+        type: OptionType.Checkbox,
+        id: "bri-yields-population",
+        initListener: (info) => info.currentValue = briOptions.ShowPopulation,
+        updateListener: (_info, value) => briOptions.ShowPopulation = value,
+        label: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_POPULATION_NAME",
+        description: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_POPULATION_DESC",
     });
 });
 

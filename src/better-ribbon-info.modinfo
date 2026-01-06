@@ -43,6 +43,7 @@
         <UIScripts>
           <!-- Ribbon -->
           <Item>scripts/ui/ribbon/player-production.js</Item>
+          <Item>scripts/ui/ribbon/player-population.js</Item>
           <!-- Options -->
           <Item>scripts/ui/options/bri-options.js</Item>
           <Item>scripts/ui/options/mod-options.js</Item>
