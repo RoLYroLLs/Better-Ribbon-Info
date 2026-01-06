@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+  <EnglishText>
+    <Row Tag="LOC_MOD_BETTER_RIBBON_INFO_NAME">
+      <Text>Better Ribbon Info</Text>
+    </Row>
+    <Row Tag="LOC_MOD_BETTER_RIBBON_INFO_DESCRIPTION">
+      <Text>Adds better ribbon information to the game.[N]This is a single mod which includes 3 of izica's mods:[LIST][LI] • Player production[LI] • Player population / citizens[LI] • Player combat power[/LIST]</Text>
+    </Row>
+    <Row Tag="LOC_MOD_BETTER_RIBBON_INFO_AUTHORS">
+      <Text>RoLYroLLs</Text>
+    </Row>
+    <Row Tag="LOC_MOD_BETTER_RIBBON_INFO_THANKS">
+      <Text>izica's mods:[LIST][LI] • Player production[LI] • Player population / citizens[LI] • Player combat power[/LIST]</Text>
+    </Row>
+    <Row Tag="LOC_MOD_BETTER_RIBBON_INFO_COMPATIBILITY">
+      <Text>This should be compatible with all other mods.</Text>
+    </Row>
+    <Row Tag="LOC_MOD_BETTER_RIBBON_INFO_URL">
+      <Text>https://github.com/RoLYroLLs/Better-Ribbon-Info</Text>
+    </Row>
+    <Row Tag="LOC_MOD_BETTER_RIBBON_INFO_VERSION">
+      <Text>1.0.0</Text>
+    </Row>
+  </EnglishText>
+</Database>

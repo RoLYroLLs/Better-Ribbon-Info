@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="better-ribbon-info" version="1.0.0" xmlns="ModInfo">
+  <Properties>
+    <Name>LOC_MOD_BETTER_RIBBON_INFO_NAME</Name>
+    <Description>LOC_MOD_BETTER_RIBBON_INFO_DESCRIPTION</Description>
+    <Authors>RoLYroLLs</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <!-- properties for TCS Improved Mod Page -->
+    <SpecialThanks>izica's mods: Player production, Player population / citizens, and Player combat power</SpecialThanks>
+    <Compatibility>This should be compatible with all other mods.</Compatibility>
+    <URL>https://github.com/RoLYroLLs/Better-Ribbon-Info</URL>
+    <Version>1.0.0</Version>
+  </Properties>
+  <Dependencies>
+    <Mod id="base-standard" title="LOC_MODULE_BASE_STANDARD_NAME" />
+  </Dependencies>
+  <ActionCriteria>
+    <Criteria id="always">
+      <AlwaysMet />
+    </Criteria>
+  </ActionCriteria>
+  <ActionGroups>
+  </ActionGroups>
+  <LocalizedText>
+    <File>text/en_US/ModInfoText.xml</File>
+  </LocalizedText>
+</Mod>
