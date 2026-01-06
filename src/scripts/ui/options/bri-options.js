@@ -8,6 +8,7 @@ const briOptions = new class {
     defaults = {
         ShowProduction: Number(true),
         ShowPopulation: Number(true),
+        ShowCombatPower: Number(true),
     };
     data = {};
     load(optionID) {
@@ -39,11 +40,20 @@ const briOptions = new class {
         this.data.ShowPopulation = Boolean(value);
         this.save("ShowPopulation");
     }
+    get ShowCombatPower() {
+        this.data.ShowCombatPower ??= Boolean(this.load("ShowCombatPower"));
+        return this.data.ShowCombatPower;
+    }
+    set ShowCombatPower(value) {
+        this.data.ShowCombatPower = Boolean(value);
+        this.save("ShowCombatPower");
+    }
 };
 
 // log stored values
 briOptions.ShowProduction;
 briOptions.ShowPopulation;
+briOptions.ShowCombatPower;
 
 Options.addInitCallback(() => {
     Options.addOption({
@@ -65,6 +75,16 @@ Options.addInitCallback(() => {
         updateListener: (_info, value) => briOptions.ShowPopulation = value,
         label: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_POPULATION_NAME",
         description: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_POPULATION_DESC",
+    });
+    Options.addOption({
+        category: CategoryType.Mods,
+        group: "BRI_MOD",
+        type: OptionType.Checkbox,
+        id: "bri-yields-combat-power",
+        initListener: (info) => info.currentValue = briOptions.ShowCombatPower,
+        updateListener: (_info, value) => briOptions.ShowCombatPower = value,
+        label: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_COMBAT_POWER_NAME",
+        description: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_COMBAT_POWER_DESC",
     });
 });
 

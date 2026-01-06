@@ -16,5 +16,11 @@
     <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_POPULATION_DESC">
       <Text>Shows population yield on the ribbon.</Text>
     </Replace>
+    <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_COMBAT_POWER_NAME">
+      <Text>Show Combat Power</Text>
+    </Replace>
+    <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_COMBAT_POWER_DESC">
+      <Text>Shows combat power yield on the ribbon.</Text>
+    </Replace>
   </EnglishText>
 </Database>
