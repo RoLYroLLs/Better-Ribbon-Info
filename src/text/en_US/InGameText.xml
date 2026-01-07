@@ -22,5 +22,11 @@
     <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_COMBAT_POWER_DESC">
       <Text>Shows combat power yield on the ribbon.</Text>
     </Replace>
+    <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_FOOD_NAME">
+      <Text>Show Food</Text>
+    </Replace>
+    <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_FOOD_DESC">
+      <Text>Shows food yield on the ribbon.</Text>
+    </Replace>
   </EnglishText>
 </Database>

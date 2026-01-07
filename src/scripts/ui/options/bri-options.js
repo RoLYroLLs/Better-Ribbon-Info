@@ -9,6 +9,7 @@ const briOptions = new class {
         ShowProduction: Number(true),
         ShowPopulation: Number(true),
         ShowCombatPower: Number(true),
+        ShowFood: Number(true),
     };
     data = {};
     load(optionID) {
@@ -48,12 +49,21 @@ const briOptions = new class {
         this.data.ShowCombatPower = Boolean(value);
         this.save("ShowCombatPower");
     }
+    get ShowFood() {
+        this.data.ShowFood ??= Boolean(this.load("ShowFood"));
+        return this.data.ShowFood;
+    }
+    set ShowFood(value) {
+        this.data.ShowFood = Boolean(value);
+        this.save("ShowFood");
+    }
 };
 
 // log stored values
 briOptions.ShowProduction;
 briOptions.ShowPopulation;
 briOptions.ShowCombatPower;
+briOptions.ShowFood;
 
 Options.addInitCallback(() => {
     Options.addOption({
@@ -85,6 +95,16 @@ Options.addInitCallback(() => {
         updateListener: (_info, value) => briOptions.ShowCombatPower = value,
         label: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_COMBAT_POWER_NAME",
         description: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_COMBAT_POWER_DESC",
+    });
+    Options.addOption({
+        category: CategoryType.Mods,
+        group: "BRI_MOD",
+        type: OptionType.Checkbox,
+        id: "bri-yields-food",
+        initListener: (info) => info.currentValue = briOptions.ShowFood,
+        updateListener: (_info, value) => briOptions.ShowFood = value,
+        label: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_FOOD_NAME",
+        description: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_FOOD_DESC",
     });
 });
 
