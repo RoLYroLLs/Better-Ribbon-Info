@@ -7,22 +7,27 @@ setTimeout(() => {
   prototype.createPlayerYieldsData = function (playerLibrary, isLocal) {
     const data = createPlayerYieldsData.call(this, playerLibrary, isLocal);
 
-    if (briOptions.ShowProduction === false) {
-      console.info(`Skipping Production due to briOptions.ShowProduction: (${briOptions.ShowProduction})`);
-      return data;
-    }
+    try {
+      if (briOptions.ShowProduction === false) {
+        console.warn(`${briOptions.modID}:Skipping Production due to briOptions.ShowProduction: (${briOptions.ShowProduction})`);
+        return data;
+      }
 
-    /* Add Production Info */
-    const production = playerLibrary.Stats?.getNetYield(YieldTypes.YIELD_PRODUCTION);
-    data.push({
-      type: 'default',
-      label: Locale.compose("LOC_YIELD_PRODUCTION"),
-      value: `+${Math.floor(production)}`,
-      img: `<img src='${UI.getIconURL("YIELD_PRODUCTION")}'>`,
-      details: '',
-      rawValue: production,
-      warningThreshold: Infinity
-    },)
+      /* Add Production Info */
+      const production = playerLibrary.Stats?.getNetYield(YieldTypes.YIELD_PRODUCTION);
+      data.push({
+        type: 'default',
+        label: Locale.compose("LOC_YIELD_PRODUCTION"),
+        value: `+${Math.floor(production)}`,
+        img: `<img src='${UI.getIconURL("YIELD_PRODUCTION")}'>`,
+        details: '',
+        rawValue: production,
+        warningThreshold: Infinity
+      },)
+    }
+    catch (e) {
+      console.error(`${briOptions.modID}: player-production error: ${e}`);
+    }
 
     /* End Additions */
     return data;
