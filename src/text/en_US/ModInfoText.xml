@@ -5,13 +5,39 @@
       <Text>Better Ribbon Info</Text>
     </Row>
     <Row Tag="LOC_MOD_BETTER_RIBBON_INFO_DESCRIPTION">
-      <Text>Adds better ribbon information to the game.[N]This is a single mod which includes 3 of izica's mods:[LIST][LI] • Player production[LI] • Player population / citizens[LI] • Player combat power[/LIST]</Text>
+      <Text>Adds better ribbon information to the game. Includes the following data:
+        [N]
+        [LIST]
+        [LI] [B]• [icon:YIELD_PRODUCTION] Production[/B]
+        [LI] [B]• [icon:CITY_CITIZENS_LIST] Citizens[/B]
+        [LI] [B]• [icon:NAR_REW_COMBAT] Combat Power[/B]
+        [LI] [B]• [icon:YIELD_FOOD] Food[/B]
+        [/LIST]
+        [N]
+        This is a single mod which includes 3 of izica's mods:
+        [LIST]
+        [LI] [B]• Player production[/B]
+        [LI] [B]• Player population / citizens[/B]
+        [LI] [B]• Player combat power[/B]
+        [/LIST]
+        [N]
+        This mod does not affect saved games.
+        [N]
+        [B]URL:[/B] [URL]https://github.com/RoLYroLLs/Better-Ribbon-Info[/URL]
+      </Text>
     </Row>
     <Row Tag="LOC_MOD_BETTER_RIBBON_INFO_AUTHORS">
       <Text>RoLYroLLs</Text>
     </Row>
     <Row Tag="LOC_MOD_BETTER_RIBBON_INFO_THANKS">
-      <Text>izica's mods:[LIST][LI] • Player production[LI] • Player population / citizens[LI] • Player combat power[/LIST]</Text>
+      <Text>izica's mods:
+        [N]
+        [LIST]
+        [LI] [B]• Player production[/B]
+        [LI] [B]• Player population / citizens[/B]
+        [LI] [B]• Player combat power[/B]
+        [/LIST]
+      </Text>
     </Row>
     <Row Tag="LOC_MOD_BETTER_RIBBON_INFO_COMPATIBILITY">
       <Text>This should be compatible with all other mods.</Text>
