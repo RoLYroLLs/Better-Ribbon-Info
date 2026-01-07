@@ -2,39 +2,45 @@ import { D as DiploRibbonData } from '/base-standard/ui/diplo-ribbon/model-diplo
 import briOptions from '../options/bri-options.js';
 
 setTimeout(() => {
-    const prototype = Object.getPrototypeOf(DiploRibbonData);
-    const createPlayerYieldsData = prototype.createPlayerYieldsData;
-    prototype.createPlayerYieldsData = function (playerLibrary, isLocal) {
-        const data = createPlayerYieldsData.call(this, playerLibrary, isLocal);
+  const prototype = Object.getPrototypeOf(DiploRibbonData);
+  const createPlayerYieldsData = prototype.createPlayerYieldsData;
+  prototype.createPlayerYieldsData = function (playerLibrary, isLocal) {
+    const data = createPlayerYieldsData.call(this, playerLibrary, isLocal);
 
-        if (briOptions.ShowPopulation === false) {
-            console.info(`Skipping Population due to briOptions.ShowPopulation: (${briOptions.ShowPopulation})`);
-            return data;
-        }
-
-        /* Add Population Info */
-        let specialists = 0;
-        let urbanPopulation = 0;
-        let ruralPopulation = 0;
-        const cities = playerLibrary.Cities.getCities();
-        for (const city of cities) {
-            specialists += city.Workers.getNumWorkers(false) ?? 0;
-            urbanPopulation += city.urbanPopulation ?? 0;
-            ruralPopulation += city.ruralPopulation ?? 0;
-        }
-
-        data.push({
-            type: 'default',
-            label: Locale.compose("LOC_UI_CITY_BANNER_POPULATION_INFO", `${urbanPopulation}`, `${ruralPopulation}`, `${specialists}`),
-            value: urbanPopulation + ruralPopulation + specialists,
-            img: `<img src='${UI.getIconURL("CITY_CITIZENS_HI")}'>`,
-            details: "",
-            rawValue: urbanPopulation + ruralPopulation + specialists,
-            warningThreshold: Infinity,
-        },)
-
-        /* End Additions */
+    try {
+      if (briOptions.ShowPopulation === false) {
+        console.warn(`${briOptions.modID}:Skipping Population due to briOptions.ShowPopulation: (${briOptions.ShowPopulation})`);
         return data;
+      }
+
+      /* Add Population Info */
+      let specialists = 0;
+      let urbanPopulation = 0;
+      let ruralPopulation = 0;
+      const cities = playerLibrary.Cities.getCities();
+      for (const city of cities) {
+        specialists += city.Workers.getNumWorkers(false) ?? 0;
+        urbanPopulation += city.urbanPopulation ?? 0;
+        ruralPopulation += city.ruralPopulation ?? 0;
+      }
+
+      data.push({
+        type: 'default',
+        label: Locale.compose("LOC_UI_CITY_BANNER_POPULATION_INFO", `${urbanPopulation}`, `${ruralPopulation}`, `${specialists}`),
+        value: urbanPopulation + ruralPopulation + specialists,
+        //img: `<img src='${UI.getIconURL("CITY_CITIZENS_HI")}'>`,
+        img: `<img src='${UI.getIconURL("CITY_CITIZENS_LIST")}'>`,
+        details: "",
+        rawValue: urbanPopulation + ruralPopulation + specialists,
+        warningThreshold: Infinity,
+      },)
     }
-    DiploRibbonData.updateAll();
+    catch (e) {
+      console.error(`${briOptions.modID}: player-population error: ${e}`);
+    }
+
+    /* End Additions */
+    return data;
+  }
+  DiploRibbonData.updateAll();
 }, 100);

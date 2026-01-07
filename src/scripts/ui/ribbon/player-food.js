@@ -8,25 +8,25 @@ setTimeout(() => {
     const data = createPlayerYieldsData.call(this, playerLibrary, isLocal);
 
     try {
-      if (briOptions.ShowProduction === false) {
-        console.warn(`${briOptions.modID}:Skipping Production due to briOptions.ShowProduction: (${briOptions.ShowProduction})`);
+      if (briOptions.ShowFood === false) {
+        console.warn(`${briOptions.modID}:Skipping Food due to briOptions.ShowFood: (${briOptions.ShowFood})`);
         return data;
       }
 
-      /* Add Production Info */
-      const production = playerLibrary.Stats?.getNetYield(YieldTypes.YIELD_PRODUCTION);
+      /* Add Food Info */
+      const food = playerLibrary.Stats?.getNetYield(YieldTypes.YIELD_FOOD);
       data.push({
         type: 'default',
-        label: Locale.compose("LOC_YIELD_PRODUCTION"),
-        value: `+${Math.floor(production)}`,
-        img: `<img src='${UI.getIconURL("YIELD_PRODUCTION")}'>`,
+        label: Locale.compose("LOC_YIELD_FOOD"),
+        value: `+${Math.floor(food)}`,
+        img: `<img src='${UI.getIconURL("YIELD_FOOD")}'>`,
         details: '',
-        rawValue: production,
+        rawValue: food,
         warningThreshold: Infinity
       },)
     }
     catch (e) {
-      console.error(`${briOptions.modID}: player-production error: ${e}`);
+      console.error(`${briOptions.modID}: player-food error: ${e}`);
     }
 
     /* End Additions */
