@@ -8,10 +8,10 @@
       <Text>Adds better ribbon information to the game. Includes the following data:
         [N]
         [LIST]
-        [LI] [B]• Production[/B]
-        [LI] [B]• Citizens[/B]
-        [LI] [B]• Combat Power[/B]
-        [LI] [B]• Food[/B]
+        [LI] [B]• [icon:YIELD_PRODUCTION] Production[/B]
+        [LI] [B]• [icon:CITY_CITIZENS_LIST] Citizens[/B]
+        [LI] [B]• [icon:NAR_REW_COMBAT] Combat Power[/B]
+        [LI] [B]• [icon:YIELD_FOOD] Food[/B]
         [/LIST]
         [N]
         This is a single mod which includes 3 of izica's mods:
