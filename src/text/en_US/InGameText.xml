@@ -5,28 +5,28 @@
       <Text>Better Ribbon Info</Text>
     </Replace>
     <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_PRODUCTION_NAME">
-      <Text>Show Production</Text>
+      <Text>Show [icon:YIELD_PRODUCTION] Production</Text>
     </Replace>
     <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_PRODUCTION_DESC">
-      <Text>Shows production yield on the ribbon.</Text>
+      <Text>Shows [icon:YIELD_PRODUCTION] Production yield on the ribbon.</Text>
     </Replace>
     <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_POPULATION_NAME">
-      <Text>Show Population</Text>
+      <Text>Show [icon:CITY_CITIZENS_HI] Citizens</Text>
     </Replace>
     <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_POPULATION_DESC">
-      <Text>Shows population yield on the ribbon.</Text>
+      <Text>Shows [icon:CITY_CITIZENS_HI] Citizens yield on the ribbon.</Text>
     </Replace>
     <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_COMBAT_POWER_NAME">
-      <Text>Show Combat Power</Text>
+      <Text>Show [icon:NAR_REW_COMBAT] Combat Power</Text>
     </Replace>
     <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_COMBAT_POWER_DESC">
-      <Text>Shows combat power yield on the ribbon.</Text>
+      <Text>Shows [icon:NAR_REW_COMBAT] Combat Power yield on the ribbon.</Text>
     </Replace>
     <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_FOOD_NAME">
-      <Text>Show Food</Text>
+      <Text>Show [icon:YIELD_FOOD] Food</Text>
     </Replace>
     <Replace Tag="LOC_MOD_BETTER_RIBBON_INFO_OPTION_FOOD_DESC">
-      <Text>Shows food yield on the ribbon.</Text>
+      <Text>Shows [icon:YIELD_FOOD] Food yield on the ribbon.</Text>
     </Replace>
   </EnglishText>
 </Database>
