@@ -14,16 +14,31 @@
         [LI] [B]• [icon:YIELD_FOOD] Food[/B]
         [/LIST]
         [N]
-        This is a single mod which includes 3 of izica's mods:
+        Includes the ability to turn on and off the visibility of each resource.
+        [N]
+        -
+        [N]
+        [B]SAVED GAMES[/B]
+        [N]
+        This mod does not affect saved games.
+        [N]
+        -
+        [N]
+        [B]NOTES[/B]
+        [N]
+        This mod is derived from 3 of izica's mods:
         [LIST]
         [LI] [B]• Player production[/B]
         [LI] [B]• Player population / citizens[/B]
         [LI] [B]• Player combat power[/B]
         [/LIST]
         [N]
-        This mod does not affect saved games.
+        -
         [N]
-        [B]URL:[/B] [URL]https://github.com/RoLYroLLs/Better-Ribbon-Info[/URL]
+        [B]CREDITS[/B]
+        [N]
+        [LI] [B]• izica[/B] - creating the base mods this mod derives from
+        [LI] [B]• jonathanla[/B] - idea to add [icon:YIELD_FOOD] Food to the ribbon
       </Text>
     </Row>
     <Row Tag="LOC_MOD_BETTER_RIBBON_INFO_AUTHORS">
@@ -43,10 +58,10 @@
       <Text>This should be compatible with all other mods.</Text>
     </Row>
     <Row Tag="LOC_MOD_BETTER_RIBBON_INFO_URL">
-      <Text>https://github.com/RoLYroLLs/Better-Ribbon-Info</Text>
+      <Text>https://forums.civfanatics.com/resources/better-ribbon-info.32624/</Text>
     </Row>
     <Row Tag="LOC_MOD_BETTER_RIBBON_INFO_VERSION">
-      <Text>1.0.0</Text>
+      <Text>1.1.1</Text>
     </Row>
   </EnglishText>
 </Database>
