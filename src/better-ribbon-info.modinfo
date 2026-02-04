@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Mod id="better-ribbon-info" version="1.1.1" xmlns="ModInfo">
+<Mod id="better-ribbon-info" version="1.1.2" xmlns="ModInfo">
   <Properties>
     <Name>LOC_MOD_BETTER_RIBBON_INFO_NAME</Name>
     <Description>LOC_MOD_BETTER_RIBBON_INFO_DESCRIPTION</Description>
@@ -9,7 +9,7 @@
     <SpecialThanks>izica's mods: Player production, Player population / citizens, and Player combat power</SpecialThanks>
     <Compatibility>This should be compatible with all other mods.</Compatibility>
     <URL>https://github.com/RoLYroLLs/Better-Ribbon-Info</URL>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
   </Properties>
   <Dependencies>
     <Mod id="base-standard" title="LOC_MODULE_BASE_STANDARD_NAME" />
@@ -26,6 +26,9 @@
       </Properties>
       <Actions>
         <UIScripts>
+          <!-- Helpers -->
+          <Item>scripts/helpers/bri-globals.js</Item>
+          <Item>scripts/helpers/mod-logger.js</Item>
           <!-- Options -->
           <Item>scripts/ui/options/bri-options.js</Item>
           <Item>scripts/ui/options/mod-options.js</Item>
@@ -41,14 +44,14 @@
       </Properties>
       <Actions>
         <UIScripts>
-          <!-- Ribbon -->
-          <Item>scripts/ui/ribbon/player-production.js</Item>
-          <Item>scripts/ui/ribbon/player-population.js</Item>
-          <Item>scripts/ui/ribbon/player-combat-power.js</Item>
-          <Item>scripts/ui/ribbon/player-food.js</Item>
+          <!-- Helpers -->
+          <Item>scripts/helpers/bri-globals.js</Item>
+          <Item>scripts/helpers/mod-logger.js</Item>
           <!-- Options -->
           <Item>scripts/ui/options/bri-options.js</Item>
           <Item>scripts/ui/options/mod-options.js</Item>
+          <!-- Ribbon -->
+          <Item>scripts/ui/diplo-ribbon/diplo-ribbon.js</Item>
         </UIScripts>
         <UpdateText>
           <Item>text/en_US/InGameText.xml</Item>

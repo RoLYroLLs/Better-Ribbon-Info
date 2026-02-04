@@ -16,13 +16,13 @@
         [N]
         Includes the ability to turn on and off the visibility of each resource.
         [N]
-        -
+        --
         [N]
         [B]SAVED GAMES[/B]
         [N]
         This mod does not affect saved games.
         [N]
-        -
+        --
         [N]
         [B]NOTES[/B]
         [N]
@@ -33,7 +33,7 @@
         [LI] [B]• Player combat power[/B]
         [/LIST]
         [N]
-        -
+        --
         [N]
         [B]CREDITS[/B]
         [N]
@@ -61,7 +61,7 @@
       <Text>https://forums.civfanatics.com/resources/better-ribbon-info.32624/</Text>
     </Row>
     <Row Tag="LOC_MOD_BETTER_RIBBON_INFO_VERSION">
-      <Text>1.1.1</Text>
+      <Text>1.1.2</Text>
     </Row>
   </EnglishText>
 </Database>
