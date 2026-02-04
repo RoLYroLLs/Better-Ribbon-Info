@@ -1,10 +1,12 @@
 import '/core/ui/options/screen-options.js';  // make sure this loads first
 import { C as CategoryType, O as Options, a as OptionType } from '/core/ui/options/editors/index.chunk.js';
+import BriGlobals from '../../helpers/bri-globals.js';
 // set up mod options tab
 import ModOptions from './mod-options.js';
+import ModLogger from '../../helpers/mod-logger.js';
 
-const briOptions = new class {
-    modID = "better-ribbon-info";
+const BriOptions = new class {
+    modID = BriGlobals.modId;
     defaults = {
         ShowProduction: Number(true),
         ShowPopulation: Number(true),
@@ -22,7 +24,15 @@ const briOptions = new class {
         return value;
     }
     save(optionID) {
-        const value = Number(this.data[optionID]);
+        const value = this.data[optionID];
+
+        // numbers / booleans for checkboxes
+        if (typeof value === "boolean") {
+            ModOptions.save(this.modID, optionID, Number(value));
+            return;
+        }
+
+        // objects/arrays/strings (JSON-safe)
         ModOptions.save(this.modID, optionID, value);
     }
     get ShowProduction() {
@@ -60,10 +70,10 @@ const briOptions = new class {
 };
 
 // log stored values
-briOptions.ShowProduction;
-briOptions.ShowPopulation;
-briOptions.ShowCombatPower;
-briOptions.ShowFood;
+BriOptions.ShowProduction;
+BriOptions.ShowPopulation;
+BriOptions.ShowCombatPower;
+BriOptions.ShowFood;
 
 Options.addInitCallback(() => {
     Options.addOption({
@@ -71,8 +81,8 @@ Options.addInitCallback(() => {
         group: "BRI_MOD",
         type: OptionType.Checkbox,
         id: "bri-yields-production",
-        initListener: (info) => info.currentValue = briOptions.ShowProduction,
-        updateListener: (_info, value) => briOptions.ShowProduction = value,
+        initListener: (info) => info.currentValue = BriOptions.ShowProduction,
+        updateListener: (_info, value) => BriOptions.ShowProduction = value,
         label: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_PRODUCTION_NAME",
         description: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_PRODUCTION_DESC",
     });
@@ -81,8 +91,8 @@ Options.addInitCallback(() => {
         group: "BRI_MOD",
         type: OptionType.Checkbox,
         id: "bri-yields-population",
-        initListener: (info) => info.currentValue = briOptions.ShowPopulation,
-        updateListener: (_info, value) => briOptions.ShowPopulation = value,
+        initListener: (info) => info.currentValue = BriOptions.ShowPopulation,
+        updateListener: (_info, value) => BriOptions.ShowPopulation = value,
         label: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_POPULATION_NAME",
         description: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_POPULATION_DESC",
     });
@@ -91,8 +101,8 @@ Options.addInitCallback(() => {
         group: "BRI_MOD",
         type: OptionType.Checkbox,
         id: "bri-yields-combat-power",
-        initListener: (info) => info.currentValue = briOptions.ShowCombatPower,
-        updateListener: (_info, value) => briOptions.ShowCombatPower = value,
+        initListener: (info) => info.currentValue = BriOptions.ShowCombatPower,
+        updateListener: (_info, value) => BriOptions.ShowCombatPower = value,
         label: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_COMBAT_POWER_NAME",
         description: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_COMBAT_POWER_DESC",
     });
@@ -101,11 +111,27 @@ Options.addInitCallback(() => {
         group: "BRI_MOD",
         type: OptionType.Checkbox,
         id: "bri-yields-food",
-        initListener: (info) => info.currentValue = briOptions.ShowFood,
-        updateListener: (_info, value) => briOptions.ShowFood = value,
+        initListener: (info) => info.currentValue = BriOptions.ShowFood,
+        updateListener: (_info, value) => BriOptions.ShowFood = value,
         label: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_FOOD_NAME",
         description: "LOC_MOD_BETTER_RIBBON_INFO_OPTION_FOOD_DESC",
     });
 });
 
-export { briOptions as default };
+ModLogger.configure({
+    prefix: BriOptions.modID,
+    minLevel: ModLogger.Levels.Error,
+    sink: "warn",
+    includeFunction: true,
+    includeLocation: true,
+    shortLocation: true,
+    functionPlacement: "prefix",
+    locationPlacement: "suffix",
+});
+
+ModLogger.forceInfo("ModLogger configured", {
+    minLevel: ModLogger._cfg?.minLevel, // ok if this is undefined; just informational
+    sink: ModLogger._cfg?.sink,
+});
+
+export { BriOptions as default };
