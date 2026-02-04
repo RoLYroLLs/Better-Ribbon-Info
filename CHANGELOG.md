@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog], and this project adheres to [Semantic Versioning].
 
+## [1.1.2] - 2026-02-03
+
+### Added
+
+- Added ModLogger to easily turn on and off logs for mod regardless of game's level on logging
+
+### Changed
+
+- Updated icon names/locations
+
 ## [1.1.1] - 2026-01-08
 
 ### Changed
@@ -21,7 +31,6 @@ The format is based on [Keep a Changelog], and this project adheres to [Semantic
 
 - Changed the icon for Citizen
 - Changed the icon for Combat Power
-
 
 ## [1.0.0] - 2026-01-05
 
@@ -41,6 +50,7 @@ The format is based on [Keep a Changelog], and this project adheres to [Semantic
 [semantic versioning]: https://semver.org/spec/v2.0.0.html
 
 <!-- Versions -->
+[1.1.2]: https://github.com/RoLYroLLs/Better-Ribbon-Info/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/RoLYroLLs/Better-Ribbon-Info/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/RoLYroLLs/Better-Ribbon-Info/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/RoLYroLLs/Better-Ribbon-Info/releases/tag/v1.0.0
