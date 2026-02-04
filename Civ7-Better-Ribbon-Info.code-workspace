@@ -1,11 +1,16 @@
 {
 	"folders": [
 		{
+			"name": "Better-Ribbon-Info",
+			"path": "."
+		},
+		{
 			"name": "Sid Meier's Civilization VII",
 			"path": "../../../../../../Program Files (x86)/Steam/steamapps/common/Sid Meier's Civilization VII"
 		},
 		{
-			"path": "."
+			"name": "Sid Meier's Civilization VII",
+			"path": "C:/Users/rolyrolls/AppData/Local/Firaxis Games/Sid Meier's Civilization VII"
 		}
 	],
 	"settings": {}

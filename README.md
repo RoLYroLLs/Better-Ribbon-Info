@@ -5,14 +5,10 @@ Sid Meier's Civilization VII mod to show more information on the player ribbon.
 **What Is It?**
 
 Adds better ribbon information to the game. Includes the following data:
-- ![Production](./assets/CivVII/icons/icon_production-10x10.png)
- Production
-- ![Citizens](./assets/CivVII/icons/icon_citizens-10x10.png)
- Citizens
-- ![Combat Power](./assets/CivVII/icons/icon_combat_power-10x10.png)
- Combat Power
-- ![Food](./assets/CivVII/icons/icon_food-10x10.png)
- Food
+- ![Production](./src/assets/icons/bri-icon-production-10x10.png) Production
+- ![Citizens](./src/assets/icons/bri-icon-citizens-10x10.png) Citizens
+- ![Combat Power](./src/assets/icons/bri-icon-combat_power-10x10.png) Combat Power
+- ![Food](./src/assets/icons/bri-icon-food-10x10.png) Food
 
 Includes the ability to turn on and off the visibility of each resource.
 
@@ -27,4 +23,4 @@ This mod is derived from 3 of [izica's](https://steamcommunity.com/profiles/7656
 **Credits**
 
 - izica ([CivFanatics](https://forums.civfanatics.com/members/izica.347144/#resources) | [Steam](https://steamcommunity.com/profiles/76561198026145429/myworkshopfiles/?appid=1295660)) - creating the base mods this mod derives from
-- jonathanla ([Steam](https://steamcommunity.com/profiles/76561198027440556)) - idea to add ![Food](./assets/CivVII/icons/icon_food-10x10.png) Food to the ribbon
+- jonathanla ([Steam](https://steamcommunity.com/profiles/76561198027440556)) - idea to add ![Food](./src/assets/icons/bri-icon-food-10x10.png) Food to the ribbon
