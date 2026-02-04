@@ -44,17 +44,14 @@
       </Properties>
       <Actions>
         <UIScripts>
-          <!-- Ribbon -->
-          <Item>scripts/ui/ribbon/player-production.js</Item>
-          <Item>scripts/ui/ribbon/player-population.js</Item>
-          <Item>scripts/ui/ribbon/player-combat-power.js</Item>
-          <Item>scripts/ui/ribbon/player-food.js</Item>
           <!-- Helpers -->
           <Item>scripts/helpers/bri-globals.js</Item>
           <Item>scripts/helpers/mod-logger.js</Item>
           <!-- Options -->
           <Item>scripts/ui/options/bri-options.js</Item>
           <Item>scripts/ui/options/mod-options.js</Item>
+          <!-- Ribbon -->
+          <Item>scripts/ui/diplo-ribbon/diplo-ribbon.js</Item>
         </UIScripts>
         <UpdateText>
           <Item>text/en_US/InGameText.xml</Item>
