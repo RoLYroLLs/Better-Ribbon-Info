@@ -1,4 +1,4 @@
-import { D as DiploRibbonData } from '/base-standard/ui/diplo-ribbon/model-diplo-ribbon.chunk.js'
+import { DiploRibbonData } from '/base-standard/ui/diplo-ribbon/model-diplo-ribbon.js'
 import BriOptions from '../options/bri-options.js';
 import ModLogger from "../../helpers/mod-logger.js";
 

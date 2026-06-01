@@ -1,4 +1,5 @@
-import { d as CategoryData, C as CategoryType } from '/core/ui/options/editors/index.chunk.js';
+import { CategoryType } from '/core/ui/options/model-options.js';
+import { CategoryData } from '/core/ui/options/options-helpers.js';
 import ModLogger from '../../helpers/mod-logger.js';
 
 CategoryType["Mods"] = "mods";
