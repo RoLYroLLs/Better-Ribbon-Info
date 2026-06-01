@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog], and this project adheres to [Semantic Versioning].
 
+## [1.2.0] - 2026-06-01
+
+### Changed
+
+- Updated mod to maintain compatibility with Civilization VII v1.4.0
+
+### Breaking
+
+- **WARNING:** This update requires Civilization VII v1.4.0 or newer and will not work on older versions.
+
+### Fixed
+
+- Fixed an issue where the mod crashed when opening the game.
+
 ## [1.1.2] - 2026-02-03
 
 ### Added
